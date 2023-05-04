@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Divider, Typography, InputLabel, MenuItem, FormControl, Select } from '@mui/material';
+import { Box, Divider, Typography, InputLabel, MenuItem, FormControl, Select, Pagination } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
 import RecommendationItem from 'src/component/RecommendationItem';
 
@@ -37,6 +37,10 @@ export default function RecommendationMainView() {
             <RecommendationItem />
             <RecommendationItem />
         </Box>
+        <Box display='flex' justifyContent='center' marginTop='5vh' marginBottom='2vh'>
+            <Pagination count={10} />
+        </Box>
+        
     </Box>
   )
 }
