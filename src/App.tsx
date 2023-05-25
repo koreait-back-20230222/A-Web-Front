@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import MainView from "./view/MainView";
 import SignUpView from "./view/Authentication/SignUpView";
@@ -10,6 +9,10 @@ import FindPasswordView from "./view/Authentication/FindPasswordView";
 import RecommendationMainView from "./view/Recommendation/MainView";
 import Navigation from "./view/Navigation";
 import Footer from "./view/Footer";
+import { Box } from "@mui/material";
+import CustomerServiceSideNavigation from "./view/CustomerService/CustomerServiceSideNavigation";
+import CustomerServiceNotice from "./view/CustomerService/Notice";
+import CustomerServiceInquiry from "./view/CustomerService/Inquiry";
 
 function App() {
   return (
@@ -25,6 +28,11 @@ function App() {
         </Route>
         <Route path="/recommedation">
           <Route index element={<RecommendationMainView />} />
+        </Route>
+        <Route path="/customer-service">
+          <Route index element={<CustomerServiceNotice />} />
+          <Route path="notice" element={<CustomerServiceNotice />} />
+          <Route path="inquiry" element={<CustomerServiceInquiry />} />
         </Route>
       </Routes>
       <Footer />
