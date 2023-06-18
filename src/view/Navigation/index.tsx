@@ -55,7 +55,7 @@ export default function Navigation() {
           fontWeight: 600,
         }}
       >
-        <Button sx={{ mr: "1.5vw" }} size="large" onClick={() => navigator("/")}>
+        <Button sx={{ mr: "1.5vw" }} size="large" onClick={() => navigator("/course")}>
           여행지 코스
         </Button>
         <Button sx={{ mr: "1.5vw" }} size="large" onClick={() => navigator("/recommedation")}>

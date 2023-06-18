@@ -13,6 +13,9 @@ import { Box } from "@mui/material";
 import CustomerServiceSideNavigation from "./view/CustomerService/CustomerServiceSideNavigation";
 import CustomerServiceNotice from "./view/CustomerService/Notice";
 import CustomerServiceInquiry from "./view/CustomerService/Inquiry";
+import DestinationCourseMain from "./view/DestinationCourse";
+import DestinationCourseDetail from "./view/DestinationCourse/Detail";
+import DestinationCourseWrite from "./view/DestinationCourse/Write";
 
 function App() {
   return (
@@ -25,6 +28,11 @@ function App() {
           <Route path="sign-up" element={<SignUpView />} />
           <Route path="find-email" element={<FindEmailView />} />
           <Route path="find-password" element={<FindPasswordView />} />
+        </Route>
+        <Route path="/course">
+          <Route index element={<DestinationCourseMain />} />
+          <Route path="detail" element={<DestinationCourseDetail />} />
+          <Route path="write" element={<DestinationCourseWrite />} />
         </Route>
         <Route path="/recommedation">
           <Route index element={<RecommendationMainView />} />
