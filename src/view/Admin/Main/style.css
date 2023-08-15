@@ -1,0 +1,82 @@
+.admin-main-box {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.admin-main-box-title {
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-main-box-title-text {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+
+.admin-main-box-title-more {
+    color: rgba(0, 0, 255, 0.8);
+    text-decoration: underline;
+}
+
+.admin-main-box-title-more:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+.admin-main-member {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+
+    display: flex;
+}
+
+.admin-main-member-column {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.admin-main-member-item {
+    display: flex;
+}
+
+.admin-main-member-item-text {
+    padding: 5px 0;
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+}
+
+.admin-main-payment-item {
+    display: flex;
+}
+
+.admin-main-payment-item-text {
+    padding: 5px 0;
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+}
+
+.admin-main-product-item {
+    display: flex;
+    align-items: center;
+}
+
+.admin-main-product-item-image {
+    margin: 5px 0;
+    flex: 1;
+    height: 60px;
+}
+
+.admin-main-product-item-text {
+    padding: 5px 0;
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+}

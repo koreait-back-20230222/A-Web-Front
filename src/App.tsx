@@ -1,26 +1,30 @@
-import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+
+import MainView from "src/view/MainView";
+import SignUpView from "src/view/Authentication/SignUpView";
+import SignInView from "src/view/Authentication/SignInView";
+import FindEmailView from "src/view/Authentication/FindEmailView";
+import FindPasswordView from "src/view/Authentication/FindPasswordView";
+import RecommendationMain from "src/view/Recommendation/Main";
+import Navigation from "src/view/Navigation";
+import Footer from "src/view/Footer";
+import CustomerServiceNotice from "src/view/CustomerService/Notice";
+import CustomerServiceInquiry from "src/view/CustomerService/Inquiry";
+import DestinationCourseMain from "src/view/DestinationCourse";
+import DestinationCourseDetail from "src/view/DestinationCourse/Detail";
+import DestinationCourseWrite from "src/view/DestinationCourse/Write";
+import RecommendationDetail from "src/view/Recommendation/Detail";
+import RecommendationWrite from "src/view/Recommendation/Write";
 import "./App.css";
-import MainView from "./view/MainView";
-import SignUpView from "./view/Authentication/SignUpView";
-import SignInView from "./view/Authentication/SignInView";
-import { Route, Routes } from "react-router-dom";
-import FindEmailView from "./view/Authentication/FindEmailView";
-import FindPasswordView from "./view/Authentication/FindPasswordView";
-import RecommendationMainView from "./view/Recommendation/MainView";
-import Navigation from "./view/Navigation";
-import Footer from "./view/Footer";
-import { Box } from "@mui/material";
-import CustomerServiceSideNavigation from "./view/CustomerService/CustomerServiceSideNavigation";
-import CustomerServiceNotice from "./view/CustomerService/Notice";
-import CustomerServiceInquiry from "./view/CustomerService/Inquiry";
-import DestinationCourseMain from "./view/DestinationCourse";
-import DestinationCourseDetail from "./view/DestinationCourse/Detail";
-import DestinationCourseWrite from "./view/DestinationCourse/Write";
+import AdminLayout from "./view/Admin";
 
 function App() {
+
+  const { pathname } = useLocation();
+
   return (
     <>
-      <Navigation />
+      {pathname.indexOf('/admin') === -1 && (<Navigation />)}
       <Routes>
         <Route path="/" element={<MainView />} />
         <Route path="/auth">
@@ -35,15 +39,22 @@ function App() {
           <Route path="write" element={<DestinationCourseWrite />} />
         </Route>
         <Route path="/recommedation">
-          <Route index element={<RecommendationMainView />} />
+          <Route index element={<RecommendationMain />} />
+          <Route path="write" element={<RecommendationWrite />} />
+          <Route path="detail/:recommedationNumber" element={<RecommendationDetail />} />
         </Route>
         <Route path="/customer-service">
           <Route index element={<CustomerServiceNotice />} />
           <Route path="notice" element={<CustomerServiceNotice />} />
           <Route path="inquiry" element={<CustomerServiceInquiry />} />
         </Route>
+        <Route path="/destination">
+          <Route path="write" element={<></>} />
+          <Route path="detail" element={<></>} />
+        </Route>
+        <Route path="/admin" element={<AdminLayout />} />
       </Routes>
-      <Footer />
+      {pathname.indexOf('/admin') === -1 && (<Footer />)}
     </>
   );
 }

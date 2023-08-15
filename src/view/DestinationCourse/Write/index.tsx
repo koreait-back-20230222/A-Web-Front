@@ -94,8 +94,8 @@ export default function DestinationCourseWrite() {
                         <CourseDetailListItem />
                     </Box>
                     <Box display='flex' m='0 1.5vw' alignItems='center'>
-                        <Typography flex='1' variant='h5' padding='5px' textAlign='center' border='1px solid #000000'>예상 경비</Typography>
-                        <Typography flex='4' variant='h5' padding='5px 15px' border='1px solid #000000' borderLeft='0px'>00,000 원</Typography>
+                        <Typography flex='2' variant='h5' padding='5px' textAlign='center' border='1px solid #999999'>예상 경비</Typography>
+                        <Typography flex='5' variant='h5' padding='5px 15px' border='1px solid #999999' borderLeft='0px'>00,000 원</Typography>
                     </Box>
                 </Box>
             </Grid>

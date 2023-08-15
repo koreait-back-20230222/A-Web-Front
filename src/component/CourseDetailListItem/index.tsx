@@ -1,4 +1,4 @@
-import { Box, Card, IconButton, Typography } from '@mui/material'
+import { Box, Button, Card, IconButton, Typography } from '@mui/material'
 import { ArrowDropUp, ArrowDropDown } from '@mui/icons-material';
 import React from 'react'
 
@@ -25,11 +25,17 @@ function Item() {
 export default function CourseDetailListItem() {
   return (
     <Card sx={{ mt: '25px', p: '10px' }}>
-        <Box display='flex' p='5px 15px'>
-            <Typography variant='h5'>여행지 목록</Typography>
-            <Box bgcolor='#999999' ml='15px' p='2.5px 20px'>1 일차</Box>
+        <Box display='flex' justifyContent='space-between' p='5px 15px'>
+            <Box display='flex'>
+                <Typography variant='h5'>여행지 목록</Typography>
+                <Box bgcolor='#999999' ml='15px' p='2.5px 20px'>1 일차</Box>
+            </Box>
+            <Box>
+                {/* //todo : 1일차에만 뜨도록 만들기 */}
+                <Button variant='outlined'>일차 추가</Button>
+            </Box>
         </Box>
-        <Box height='300px' overflow='auto'>
+        <Box>
             <Item />
             <Item />
             <Item />

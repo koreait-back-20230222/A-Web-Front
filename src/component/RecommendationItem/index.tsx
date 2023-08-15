@@ -1,9 +1,17 @@
 import { Box, Divider, Typography } from '@mui/material'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function RecommendationItem() {
+
+  const navigator = useNavigate();
+
+  const onClickEvent = () => {
+    navigator('/recommedation/detail/1');
+  }
+
   return (
-    <Box display='flex' borderBottom='1px solid #404040' marginBottom='2vh'>
+    <Box display='flex' borderBottom='1px solid #404040' marginBottom='2vh' onClick={() => onClickEvent()}>
         <Box component='img' src='https://i.namu.wiki/i/8FDIV9Jwh-Zm6lrx05ZtRvKvpzjHkHBXv6P8X-NW9ho9ZS0KFSJtTGA-tOMN6U4TVUTdLYICSiEks6AsR9lvXs-9eWtkoXWazRF8dFHJ9Xa8Nckdqt58HKeD-o4ZxCw6BtwpjMc7yjGMm2wy8-j-Sw.webp' width='12vw' height='9vw' margin='1vw' borderRadius='10%'></Box>
         <Box margin='1vw' height='9vw'>
             <Typography fontWeight='700' fontSize='24px' marginBottom='0.5vw'>경복궁</Typography>

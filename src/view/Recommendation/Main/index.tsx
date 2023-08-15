@@ -3,7 +3,7 @@ import { Box, Divider, Typography, InputLabel, MenuItem, FormControl, Select, Pa
 import { SelectChangeEvent } from '@mui/material/Select';
 import RecommendationItem from 'src/component/RecommendationItem';
 
-export default function RecommendationMainView() {
+export default function RecommendationMain() {
     const [age, setAge] = useState('');
 
     const handleChange = (event: SelectChangeEvent) => {

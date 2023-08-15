@@ -1,0 +1,31 @@
+.admin-navigation {
+    padding: 16px;
+}
+
+.admin-navigation-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.admin-navigation-item {
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.admin-navigation-active {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+.admin-navigation-item-active {
+    padding: 8px 16px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.admin-navigation-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    font-weight: 700;
+}
